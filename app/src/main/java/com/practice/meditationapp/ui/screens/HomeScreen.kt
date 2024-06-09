@@ -44,7 +44,7 @@ import androidx.compose.ui.unit.sp
 import com.practice.meditationapp.R
 import com.practice.meditationapp.ui.data.BottomMenuData
 import com.practice.meditationapp.ui.data.FeatureData
-import com.practice.meditationapp.ui.standardQuadFromTo
+import com.practice.meditationapp.ui.utils.standardQuadFromTo
 import com.practice.meditationapp.ui.theme.AquaBlue
 import com.practice.meditationapp.ui.theme.Beige1
 import com.practice.meditationapp.ui.theme.Beige2

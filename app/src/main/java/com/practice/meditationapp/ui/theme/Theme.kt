@@ -10,12 +10,13 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
-private val DarkColorScheme = darkColorScheme(
+/*private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     secondary = PurpleGrey80,
     tertiary = Pink80
@@ -25,6 +26,17 @@ private val LightColorScheme = lightColorScheme(
     primary = Purple40,
     secondary = PurpleGrey40,
     tertiary = Pink40
+)*/
+
+/*Land Of Coding*/
+private val DarkColorScheme = darkColorScheme(
+    primary = BlueGray,
+    surface = Black,
+)
+
+private val LightColorScheme = lightColorScheme(
+    primary = Black,
+    surface = Color.White
 )
 
 @Composable
@@ -37,7 +49,8 @@ fun MeditationAppTheme(
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
-            if (darkTheme) DarkColorScheme else LightColorScheme
+            //if (darkTheme) DarkColorScheme else LightColorScheme
+            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context) //Land Of Coding
         }
 
         darkTheme -> DarkColorScheme

@@ -1,4 +1,4 @@
-package com.practice.meditationapp.ui
+package com.practice.meditationapp.ui.utils
 
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Path
